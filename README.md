@@ -1,4 +1,9 @@
 # astra-skill-pre-action-research
+<div align="center">
+
+[![License](https://badgen.net/github/license/alrcatraz/astra-skill-pre-action-research)](LICENSE) [![GitHub stars](https://badgen.net/github/stars/alrcatraz/astra-skill-pre-action-research)](https://github.com/alrcatraz/astra-skill-pre-action-research) [![GitHub last commit](https://badgen.net/github/last-commit/alrcatraz/astra-skill-pre-action-research)](https://github.com/alrcatraz/astra-skill-pre-action-research/commits)
+
+</div>
 
 Mandatory research and index lookup before taking action. When investigation, credentials, preferences, devices, services, or project information is involved, documentation, tutorials, and reference indexes must be consulted before proceeding.
 
@@ -22,9 +27,21 @@ cp SKILL.md ~/.hermes/profiles/default/skills/pre-action-research.md
 |:-----------|:---------|:--------:|:--------|
 | [astra-aiagent-infra](https://github.com/alrcatraz/astra-aiagent-infra) | `docs/credential-schema.md` | Optional | Credential storage conventions for the credential-check step |
 
+## Related
+
+- [astra-aiagent-infra](https://github.com/alrcatraz/astra-aiagent-infra) — ecosystem portal
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=alrcatraz/astra-skill-pre-action-research&type=date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=alrcatraz/astra-skill-pre-action-research&type=date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=alrcatraz/astra-skill-pre-action-research&type=date" width="600" />
+  </picture>
+</div>
 
 ---
 
