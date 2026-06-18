@@ -1,29 +1,29 @@
 ---
 name: pre-action-research
-description: "在执行操作前强制调研与查索引。涉及排查、凭证、偏好、设备、服务、项目信息时，必须查阅文档、教程与参考索引再动手。"
+description: "Mandatory research and index lookup before taking action. When investigation, credentials, preferences, devices, services, or project information is involved, consult documentation, tutorials, and reference indexes before proceeding."
 category: devops
+version: 1.0.0
 ---
 
 # pre-action-research
 
 ## Trigger Conditions
 
-当任务涉及以下关键词时，本 skill 将被自动扫描命中：
-- 排查、调查、研究、调研、分析、方案、计划
-- 凭证、偏好、设备、服务、项目、索引
-- 任何需要查询、记录或更新持久化信息的事项
+This skill is automatically loaded when the task involves:
+- Investigation, research, analysis, planning, proposing a solution
+- Credentials, preferences, devices, services, projects, indexes
+- Any need to query, record, or update persistent information
 
 ## Checklist
 
-- [ ] **是否涉及需要查询的信息类型？**（凭证/偏好/设备/服务/项目/决策记录）
-  - [ ] 是 → 查本地参考索引，确认存放规则和访问方式
-  - [ ] 凭证相关 → 详见 `references/credential-yaml-schema.md`（分组、YAML 结构、加密方式）
-- [ ] **是否有相关文档、官方资料或教程可以参考？**
-  - [ ] 是 → 先查阅，分析后再提方案，不跳过调研直接动手
-- [ ] **方案是否已形成并获得用户批准？**
-  - [ ] 否 → 先提方案，等批准再执行
+- [ ] **Does the task involve information that needs to be looked up?** (credentials / preferences / devices / services / projects / decision records)
+  - [ ] Yes → consult the local reference index to confirm storage rules and access methods
+- [ ] **Is there relevant documentation, official guides, or tutorials to reference?**
+  - [ ] Yes → read first, analyse, then propose a solution. Do not skip research and jump straight to action.
+- [ ] **Has a solution been drafted and approved by the user?**
+  - [ ] No → propose a solution first, wait for approval, then execute.
 
 ## Pitfalls
 
-1. **不要跳过查索引直接凭记忆操作。** 记忆中的信息可能过时或不完整。先用索引确认最新规则。
-2. **"新旧"不是跳过索引的理由。** 无论是读取已有的还是记录新的，第一步都是查索引确认规范。
+1. **Do not skip the index and rely on memory.** Information in memory may be outdated or incomplete. Always use the index to confirm the latest rules first.
+2. **"New" or "old" is not an excuse to skip the index.** Whether reading existing information or recording new information, the first step is always to consult the index to confirm the convention.
