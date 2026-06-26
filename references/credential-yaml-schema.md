@@ -125,9 +125,9 @@ Each access method MAY carry a `guid` field that acts as a stable, collision-fre
 
 | Scheme | Example | Purpose |
 |--------|---------|---------|
-| `key` | `key:suset01-id-ed25519` | Identifies a specific SSH key on disk |
-| `pwd` | `pwd:suset01-alrcatraz` | Identifies a specific password entry in a GPG file |
-| `token` | `token:hermes-gateway-matrix` | Identifies a specific API token |
+| `key` | `key:<device>-ssh-key` | Identifies a specific SSH key on disk |
+| `pwd` | `pwd:<device>-sudo` | Identifies a specific password entry in a GPG file |
+| `token` | `token:<service>` | Identifies a specific API token |
 
 ### How GUIDs connect the credential file and device inventory
 
@@ -135,17 +135,17 @@ Each access method MAY carry a `guid` field that acts as a stable, collision-fre
 
 ```yaml
 devices:
-  suset01:
+  <device-name>:
     access:
       methods:
         - type: ssh_key
-          guid: "key:suset01-id-ed25519"          # ← GUID
-          key_path: "~/.ssh/id_ed25519_jump_star"
-          note: "primary key, deployed 2026-06-07"
+          guid: "key:<device-name>-ssh-key"          # ← GUID
+          key_path: "~/.ssh/id_ed25519_<device>"
+          note: "primary key"
 
         - type: password
-          guid: "pwd:suset01-alrcatraz"            # ← GUID
-          value: "401503"
+          guid: "pwd:<device-name>-sudo"              # ← GUID
+          value: "<sudo-password>"
           note: "SSH fallback, same as sudo"
 ```
 
@@ -153,20 +153,20 @@ devices:
 
 ```yaml
 devices:
-  suset01:
-    hostname: "SUSET01"
+  <device-name>:
+    hostname: "<HOSTNAME>"
     access_guids:                                  # ← References only
-      - "key:suset01-id-ed25519"
-      - "pwd:suset01-alrcatraz"
+      - "key:<device-name>-ssh-key"
+      - "pwd:<device-name>-sudo"
 ```
 
 ### Why GUIDs solve a real problem
 
-| Without GUID | With GUID |
+|| Without GUID | With GUID |
 |:-------------|:----------|
-| Device inventory says "SSH key ✅" — no way to know *which* key | Inventory says `guid: key:suset01-id-ed25519` — cross-reference credential file to find the exact key path |
-| Credential file says "password changed" — no way to link to device entries that reference it | Same GUID in both places — a change in the credential file is immediately traceable to all devices using that credential |
-| After a credential rotation, you must manually find every device that used the old one | A search for `guid: pwd:suset01-alrcatraz` surfaces every reference immediately |
+|| Device inventory says "SSH key ✅" — no way to know *which* key | Inventory says `guid: key:<device>-ssh-key` — cross-reference credential file to find the exact key path |
+|| Credential file says "password changed" — no way to link to device entries that reference it | Same GUID in both places — a change in the credential file is immediately traceable to all devices using that credential |
+|| After a credential rotation, you must manually find every device that used the old one | A search for `guid: pwd:<device>-sudo` surfaces every reference immediately |
 
 ### Scope
 
