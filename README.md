@@ -66,3 +66,13 @@ cp SKILL.md ~/.hermes/profiles/default/skills/pre-action-research.md
 | 仓库 | 资源 | 必须 | 用途 |
 |:-----|:-----|:----:|:-----|
 | [astra-aiagent-infra](https://github.com/alrcatraz/astra-aiagent-infra) | `docs/credential-schema.md` | 可选 | 凭证检查步骤的凭证存储规范参考 |
+
+
+---
+
+> **🏚️ 此仓库已归档**
+>
+> 此 skill 的内容已合并到 [`astra-aiagent-infra`](https://github.com/alrcatraz/astra-aiagent-infra) 的 `work-principles/skills/` 目录下，
+> 不再作为独立仓库维护。请移步 aiagent-infra 获取最新版本。
+>
+> 最后更新：2026-07-06
